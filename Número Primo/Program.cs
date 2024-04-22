@@ -61,7 +61,6 @@ for (int i = 1; i <= num_aux; i++)
     else
     {
         Console.WriteLine("É primo");
-        Console.WriteLine(i);
         i = num_aux;
     }
 }
