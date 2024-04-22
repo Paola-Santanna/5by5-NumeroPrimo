@@ -1,15 +1,23 @@
-﻿//Faça um rpograma que leia um número (do tipo que você preferir). Informe se este número é primo;
+﻿Console.WriteLine("--- Verificação de Número Primo ---\n");
 
-//Início do programa
-Console.WriteLine("--- Verificação de Número Primo ---\n");
-
-//Criação de variáveis
 int numero, num_aux;
 
 //Entrada de dados e Operações
-Console.Write("Insira um número: ");
-numero = int.Parse(Console.ReadLine());
-num_aux = numero;
+Console.WriteLine("Somente digite números POSITIVOS e DIFERENTES de ZERO\n");
+
+do
+{
+    Console.Write("Insira um número: ");
+    numero = int.Parse(Console.ReadLine());
+    num_aux = numero;
+
+    if (num_aux < 0 || num_aux == 0)
+    {
+        Console.WriteLine("\nResposta Inválida!");
+        Console.WriteLine("Digite novamente!\n");
+    }
+
+} while (numero < 0 || num_aux == 0);
 
 for (int i = 1; i <= num_aux; i++)
 {
@@ -57,6 +65,6 @@ for (int i = 1; i <= num_aux; i++)
         i = num_aux;
     }
 }
-
 //Final do programa
+Console.WriteLine("\nAperte ENTER para encerrar ...");
 Console.ReadKey();
